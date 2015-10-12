@@ -1,3 +1,6 @@
 premade
 .idea/
 __pycache__
+.direnv
+.envrc
+.ipynb_checkpoints
