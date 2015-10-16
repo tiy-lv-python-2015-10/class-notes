@@ -1,4 +1,4 @@
-#Each player rolls the die.  If the die is 1 player forfeits all points for
+# Each player rolls the die.  If the die is 1 player forfeits all points for
 # turn.  If it is not 1 then player keeps the points and chooses whether
 # to roll again.  If the player rolls 1 or stops then the other player
 # takes a turn.  First player to 100 wins the game.
@@ -53,7 +53,9 @@ class Player:
 class StupidHuman(Player):
 
     def __init__(self, name):
-        super().__init__(name)
+        #super().__init__(name)
+        self.name = "Bob"
+        self.die = Die()
         self.score = 50
 
 
@@ -122,8 +124,8 @@ class Game:
         while not self.winner:
             turn = Turn(self.current_player)
             turn_score = turn.run()
-            self.current_player.record_score(self.current_player.score
-                                             + turn_score)
+            self.current_player.record_score(
+                self.current_player.score + turn_score)
 
             print("{}'s score is now {}".format(self.current_player.name,
                                                 self.current_player.score))
