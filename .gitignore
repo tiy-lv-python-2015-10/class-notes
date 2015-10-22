@@ -4,3 +4,4 @@ __pycache__
 .direnv
 .envrc
 .ipynb_checkpoints
+first-django
